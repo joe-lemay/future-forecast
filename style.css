@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Indie+Flower&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 200%;
+    margin: 20px;
+    color:rgb(21, 81, 81);
+    text-align: center;
+}
+#user_form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70vw;
+    margin: 20px auto;
+    align-items: center;
+    border: 1px solid rgb(129, 129, 129);
+    padding: 20px;
+    background-color: rgb(21, 81, 81);
+    color: whitesmoke;
+    font-weight: bolder;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 120%;
+    border-radius: 5px;
+}
+#img_upload{
+    height: 100px;
+}
+#container{
+    width: 70vw;
+    margin: 0 auto;
+}
+#auto_img{
+    height: 500px;
+}
+#story_board{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+#story{
+    padding: 20px;
+}
+#panel{
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(252, 252, 252);
+    color: black;
+}
+#interests{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.form_element{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.check_box{
+    border: 1px solid rgb(129, 129, 129);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(21, 81, 81);
+    color: rgb(255, 253, 253);
+}
+.btn{
+    background-color:rgb(21, 81, 81);
+    color: white;
+    padding: 10px 20px;
+    font-weight: bolder;
+    font-size: 120%;
+    border-radius: 5px;
+}
+#loading{
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    color:rgb(21, 81, 81);
+}
+#get_info{
+    padding:10px 40px;
+    font-weight: bolder;
+    font-size: 120%;
+    color:rgb(21, 81, 81);
+    border-radius: 10px;
+}
+.hide{
+    visibility: hidden;
+}
+.flex{
+    display: flex;
+    gap: 10px;
+}

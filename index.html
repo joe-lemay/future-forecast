@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <h1 >Your daily forecast</h1>
+        <p>Why stop at the weather???</p>
+    </div>
+    <div id="user_form">
+        <div class="form_element">
+            <label for="">Enter Name:</label>
+            <input type="text" name="fullName" id="fullName">
+        </div>
+        <div class="form_element">
+            <label for="">Enter Zip Code:</label>
+            <input type="text" name="zip" id="zip">
+        </div>
+        <div class="form_element">
+            <label for="">Upload an image of yourself: </label>
+            <input type="file" id="img_input" onchange="encodeImageFileAsURL(this)" />
+        </div>
+        <img src="#" id="img_upload" alt="">
+        <div id="panel">
+            <h2>Select a few interests: </h2>
+            <div id="interests">
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="reading" value="reading">
+                    <label for="reading">Reading</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="outdoor_activities" value="outdoor activities">
+                    <label for="outdoor_activities">Outdoor Activities</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="sports" value="sports">
+                    <label for="sports">Sports</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="art_creativity" value="art creativity">
+                    <label for="art_creativity">Art and Creativity</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="music" value="music">
+                    <label for="music">Music</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="technology" value="technology">
+                    <label for="technology">Technology</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="cooking" value="cooking">
+                    <label for="cooking">Cooking and Culinary Arts</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="travel" value="travel">
+                    <label for="travel">Travel</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="science_nature" value="science nature">
+                    <label for="science_nature">Science and Nature</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="movies_tv_shows" value="movies tv shows">
+                    <label for="movies_tv_shows">Movies and TV Shows</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="fitness" value="fitness">
+                    <label for="fitness">Fitness</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="learning_education" value="learning education">
+                    <label for="learning_education">Learning and Education</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="social_causes" value="social causes">
+                    <label for="social_causes">Social Causes</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="fashion_style" value="fashion style">
+                    <label for="fashion_style">Fashion and Style</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="writing" value="writing">
+                    <label for="writing">Writing</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="mindfulness_wellness" value="mindfulness wellness">
+                    <label for="mindfulness_wellness">Mindfulness and Wellness</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="history_archaeology" value="history archaeology">
+                    <label for="history_archaeology">History and Archaeology</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="pets" value="pets">
+                    <label for="pets">Pets</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="cars_automobiles" value="cars automobiles">
+                    <label for="cars_automobiles">Cars and Automobiles</label>
+                </div>
+        
+                <div class="check_box">
+                    <input type="checkbox" class="check_input" id="diy_crafting" value="diy crafting">
+                    <label for="diy_crafting">DIY and Crafting</label>
+                </div>
+            </div>
+        </div>
+        <div class="flex">
+            <label for="">Choose a Voice: </label>
+            <select name="narator" id="narrate">
+                <option value="alloy">Alloy</option>
+                <option value="echo">Echo</option>
+                <option value="fable">Fable</option>
+                <option value="onyx">Onyx</option>
+                <option value="nova">Nova</option>
+                <option value="shimmer">Shimmer</option>
+            </select>
+        </div>
+        <!-- <button onclick="getInfo(zip, fullName)" id="get_info">Get Personal Forecast</button> -->
+        <button onclick="getDescription(zip, fullName)" id="get_info">Get Personal Forecast</button>
+    </div>
+    <div id="container">
+        <div id="loading"></div>
+        <div id="story_board" class="hide">
+            <img src="" id="auto_img" alt="">
+            <div class="flex">
+                <button onclick="playBack()" class="btn">Narrate</button>
+                <button onclick="playBackStop()" class="btn">Stop Narration</button>
+            </div>
+            <p id="story"></p>
+            <div class="flex">
+                <button onclick="startNew()" class="btn">Clear Form</button>
+                <button onclick="getDescription(zip, fullName)" class="btn">Remake day</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
