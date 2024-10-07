@@ -1,12 +1,11 @@
 <p><h1>Daily Forecast</h1></p>
 <div align="center">
-<img src="imgs/pokedex.PNG" width="500px" >
-
 <br/>
 
 <p align="center">
     When you need a little more inspiration than what the weathers like, turn a boring day into an adventure in your own town, or on vacation! All you really need is a name, zip code, and list of interests and it does the work for you. </p>
-<img src="imgs/oakai.PNG" width="500px" >
+<img src="img/forecast.PNG" width="500px" >
+<img src="img/forecast2.PNG" width="1000px" >
 </div>
 
 <!-- ABOUT THE PROJECT -->
